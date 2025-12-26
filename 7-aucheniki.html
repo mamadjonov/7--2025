@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7-А КЛАСС</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<!-- === SPINNER (QO‘SHILDI) === -->
+<div id="spinner" class="fixed inset-0 bg-white bg-opacity-80 flex items-center justify-center z-[100] hidden">
+  <div class="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+</div>
+
+<!-- === ФИКСИРОВАННЫЙ НАВБАР === -->
+<nav class="fixed top-0 left-0 w-full bg-blue-600 text-white py-4 px-6 flex justify-between items-center shadow-md rounded-b-2xl z-50">
+  <a href="./index.html" class="text-3xl sm:text-4xl font-bold hover:text-gray-200 transition">
+    7-А КЛАСС
+  </a>
+
+  <ul class="hidden md:flex space-x-8 text-lg font-medium">
+    <li><a href="./index.html" class="block hover:text-blue-200">Главная</a></li>
+    <li><a href="./7-aucheniki.html" class="block hover:text-blue-200">Ученики</a></li>
+  </ul>
+
+  <button id="menuBtn" class="md:hidden bg-white text-blue-600 px-3 py-1 rounded-lg font-medium shadow-sm">
+    ☰
+  </button>
+</nav>
+
+<!-- === ОСНОВНОЙ КОНТЕНТ === -->
+<div class="container mx-auto px-4 mt-32 text-center">
+
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Искать учеников..."
+    class="w-full md:w-1/2 mx-auto mb-8 p-3 border border-blue-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+  <section id="studentsGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Абдираимов Исмаил ися">
+      <img src="./assets/ismoil.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Абдираимов Исмаил</h1>
+      <p class="text-gray-700 mt-2">Абдураимов Исмаил – один из наших учеников. Он узбек и один из хорошистов нашего класса. Он умный и вежливый мальчик.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Абдрашитов Вильдан">
+      <img src="./assets/vildan.jpg" alt="" class="w-full h-56 object-cover object-top rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Абдрашитов Вильдан</h1>
+      <p class="text-gray-700 mt-2">Абдрашитов Вильдан — еще один ученик из нашего класса, он очень дружелюбный и приветливый человек, а также он отличный вратарь в футболе.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Аъзамова Ширинхон">
+      <img src="./pop.jpg" alt="" class="w-full h-56 object-cover rounded-xl bg-gray-200">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Аъзамова Ширинхон</h1>
+      <p class="text-gray-700 mt-2">
+        Она одна из самых умных девочек в нашем классе, у неё железный характер, и она очень дружелюбная.</p>          
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Бакихонов Шохруххон">
+      <img src="./assets/shox.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Бакихонов Шохруххон</h1>
+      <p class="text-gray-700 mt-2">Он тоже один из наших храбрых молодых людей. Он сильный, умный и дружелюбный.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Османова Эльнара">
+      <img src="./assets/osel.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Османова Эльнара</h1>
+      <p class="text-gray-700 mt-2">Еще одна девочка в нашем классе, она умная, смелая и всем помогает на уроках.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Бахтиёров Бехрузбек">
+      <img src="./assets/bexa.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Бахтиёров Бехрузбек</h1>
+      <p class="text-gray-700 mt-2">Еще один наш ученик — он тоже умный и дружелюбный, он очень хороший и дружелюбный мальчик.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Илхомжонов Дилёрбек">
+      <img src="./assets/dilyor.jpg" alt="" class="w-full h-56 object-cover  rounded-xl bg-gray-200">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Илхомжонов Дилёрбек</h1>
+      <p class="text-gray-700 mt-2">Самый сильный и бесстрашный мальчик в нашем классе, он ничего не боится и если возникает какая-то проблема, он обязательно решит ее, только кулаками.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Кадыров Денис">
+      <img src="./assets/denchik.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Кадыров Денис</h1>
+      <p class="text-gray-700 mt-2">Один из самых веселых и дружелюбных мальчиков в нашем классе, он всегда шутит и веселится с друзьями.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Касымов Сейран">
+      <img src="./assets/seriy.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Касымов Сейран</h1>
+      <p class="text-gray-700 mt-2">Еще один ученик в нашем классе — выдающийся, умный и очень хорошо разбирается в телефоне.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Кудратов Шербек">
+      <img src="./assets/sherbek.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Кудратов Шербек</h1>
+      <p class="text-gray-700 mt-2">Один из самых умных и сильных мальчиков в нашем классе, он всегда помогает своим друзьям и одноклассникам.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Мазурин Марк">
+      <img src="./assets/mark.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Мазурин Марк</h1>
+      <p class="text-gray-700 mt-2">Один из самых сильных в нашем классе. Хоть он и выглядит немного маленьким, но он очень сильный.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Мамаджонов Шохжахон">
+      <img src="./assets/men.jpg"
+   class="w-full h-56 object-cover rounded-xl bg-gray-200"
+   style="object-position: center calc(35% + 20px);">  
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Мамаджонов Шохжахон</h1>
+      <p class="text-gray-700 mt-2">Это я, создатель этого сайта. Вы услышите обо мне от моих друзей.</p>
+    </div>
+  
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Меджитова Эльнара">
+      <img src="./assets/medel.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Меджитова Эльнара</h1>
+      <p class="text-gray-700 mt-2">Одна из девочек в нашем классе, она умная, решительная и всем помогает на уроках.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Пўлатова Моҳинахон">
+      <img src="./assets/moxina.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Пўлатова Моҳинахон</h1>
+      <p class="text-gray-700 mt-2">Одна из стремящихся к успеху девочек нашего класса, дружелюбная и жизнерадостная, ещё одна ученица нашего класса.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Собиржанов Жасурбек">
+      <img src="./assets/jas.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Собиржанов Жасурбек</h1>
+      <p class="text-gray-700 mt-2">Один из мальчиков нашего класса — у него есть некоторые трудности в учёбе, но сам он хороший пацан.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Шербак Алекс">
+      <img src="./assets/alex.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Шербак Алекс</h1>
+      <p class="text-gray-700 mt-2">Один из мальчиков нашего класса — он очень умный и хороший в учёбе, а также дружелюбный и весёлый парень.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Эрданов Азизбек">
+      <img src="./assets/aziz.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Эрданов Азизбек</h1>
+      <p class="text-gray-700 mt-2">Один из мальчиков нашего класса — он умный и хороший пацан, а также дружелюбный и весёлый.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Лебедьев Богдан">
+      <img src="./assets/baga.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Лебедьев Богдан</h1>
+      <p class="text-gray-700 mt-2">Ещё один мальчик из нашего класса — он очень хороший, а также дружелюбный и весёлый парень.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Фахриддинов Бекзод">
+      <img src="./assets/bekzod.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Фахриддинов Бекзод</h1>
+      <p class="text-gray-700 mt-2">Один из мальчиков нашего класса — он очень умный и хороший в учёбе, а также дружелюбный и весёлый парень.</p>
+    </div>
+  
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Цой Виктор">
+      <img src="./assets/bitya.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Цой Виктор</h1>
+      <p class="text-gray-700 mt-2">Один из мальчиков нашего класса, его имя Виктор, но все в классе зовут его Витя — он очень умный и весёлый парень.</p>
+    </div>
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Немова Карина">
+      <img src="./assets/karina.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Немова Карина</h1>
+      <p class="text-gray-700 mt-2">
+  Она одна из самых умных девочек в нашем классе, у нее железный характер, и она одна из красавиц в нашем классе.
+      </p>
+    </div>
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Цой Валерия">
+      <img src="./assets/lera.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Цой Валерия</h1>
+      <p class="text-gray-700 mt-2">
+  Она одна из самых девочек в нашем классе, она добрая и всегда готова помочь своим друзьям и ешё она сестра Цой Вите а также её тоже зовут Лера когда настояшая имя Валерия.
+      </p>
+    </div>
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Азимова Райхона">
+      <img src="./assets/rayhona.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Азимова Райхона</h1>
+      <p class="text-gray-700 mt-2">
+        Она одна из самых умных девочек в нашем классе, и она одна из красавиц в нашем классе.
+      </p>
+    </div>
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Тургунова Сабина">
+      <img src="./assets/sabina.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Тургунова Сабина</h1>
+      <p class="text-gray-700 mt-2">
+        Она одна из умных девочек в нашем классе, и одна из красавиц в нашем классе.
+      </p>
+    </div>
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Шарафуддинов Шохжахон">
+      <img src="./assets/shoxjahon.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700">Шарафуддинов Шохжахон</h1>
+      <p class="text-gray-700 mt-2">
+        Один из мальчиков нашего класса — он очень умный и хороший в учёбе, а также дружелюбный и весёлый парень.
+      </p>
+    </div>
+    <div class="student bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition" data-name="Исламов Элхан">
+      <img src="./assets/elhan.jpg" alt="" class="w-full h-56 object-cover rounded-xl">
+      <h1 class="text-xl font-semibold mt-3 text-blue-700"> Исламов Элхан</h1>
+      <p class="text-gray-700 mt-2">
+        Один из мальчиков нашего класса умный и хорошо учится, а также является одним из весельчаков класса.
+      </p>
+    </div>
+  
+  </section>
+</div>
+
+<!-- === МОДАЛЬНОЕ МЕНЮ === -->
+<div id="menuModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+  <div class="relative bg-white w-11/12 max-w-sm mx-auto rounded-2xl shadow-xl text-center p-6">
+    <button id="closeModal" class="absolute top-3 left-3 text-blue-600 text-2xl font-bold hover:text-red-600 transition">✕</button>
+    <h2 class="text-2xl font-semibold text-blue-600 mb-6 mt-2">Меню</h2>
+    <ul class="space-y-4 text-gray-700 text-lg">
+      <li><a href="./7-aucheniki.html" class="block hover:text-blue-600">Ученики</a></li>
+      <li><a href="./index.html" class="block hover:text-blue-600">Главная</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer class="mt-6 text-sm text-gray-500 text-center mb-5">
+  <h1>Лица, не представленные на сайте, отказались от участия добровольно!?</h1>
+</footer>
+
+<!-- === СКРИПТ === -->
+<script>
+  // === SPINNER (QO‘SHILDI) ===
+  const spinner = document.getElementById('spinner');
+  spinner.classList.remove('hidden');
+  window.addEventListener('load', () => {
+    setTimeout(() => spinner.classList.add('hidden'), 800);
+  });
+
+  // === Поиск (SENING KODING) ===
+  const searchInput = document.getElementById('searchInput');
+  const students = document.querySelectorAll('.student');
+  searchInput.addEventListener('input', () => {
+    const value = searchInput.value.toLowerCase();
+    students.forEach(student => {
+      const name = student.dataset.name.toLowerCase();
+      student.style.display = name.includes(value) ? 'block' : 'none';
+    });
+  });
+
+  // === Модальное меню (SENING KODING) ===
+  const menuBtn = document.getElementById('menuBtn');
+  const menuModal = document.getElementById('menuModal');
+  const closeModal = document.getElementById('closeModal');
+
+  menuBtn.addEventListener('click', () => {
+    menuModal.classList.remove('hidden');
+    menuModal.classList.add('flex');
+  });
+
+  closeModal.addEventListener('click', () => {
+    menuModal.classList.add('hidden');
+    menuModal.classList.remove('flex');
+  });
+
+  menuModal.addEventListener('click', (e) => {
+    if (e.target === menuModal) {
+      menuModal.classList.add('hidden');
+      menuModal.classList.remove('flex');
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
